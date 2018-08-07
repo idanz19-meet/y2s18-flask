@@ -4,10 +4,22 @@
 <html>
 <head>
 	<title> Marx in 5 minutes </title>
-	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css' )}}">
 </head>
 <body>
 	<h1>Marx in 5 minutes version 1.0.2</h1>
+	{% if communist == True %}
 	<p>Labour is the source of wealth and the capitalists take advantage of the labour of the prolatariat! Labour is the source of wealth and the capitalists take advantage of the labour of the prolatariat!Labour is the source of wealth and the capitalists take advantage of the labour of the prolatariat!</p>
+	<ul>
+		{% for a_list in a_list %}
+		<li>{{a_list}}</li>
+		{%endfor%}
+	</ul>
+	{% else %}
+	<p>LENIN WILL GET YOU!!!</p>
+	{% endif %}
+	<p style="background-color: white"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+
 </body>
 </html>
